@@ -1,0 +1,70 @@
+---
+title       : Application for Calculating Relationships of Transmission and MPG
+subtitle    : 
+author      : T.H.
+job         : 
+framework   : html5slides   # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+# Application for Calculating Relationships of Transmission and MPG
+
+Date: 2014/12/21
+
+--- .class #id 
+
+## The purpose of this application
+
+Many peaple are interested in
+exploring the relationship between a set of variables and miles per
+gallon (MPG).
+They are particularly interested in the following two questions:
+* "Is an automatic or manual transmission better for MPG"
+* "Quantify the MPG difference between automatic and manual transmissions"
+
+This application can calculate coefficients of multiple model
+fittings.
+
+--- .class #id 
+
+## The characteristics of this application
+
+You can select variables as predectors for mph interactively.
+
+--- .class #id 
+## Screen Shot
+
+![Screen Shot](ScreenShot.png)
+
+--- .class #id 
+## Examples
+
+```{r echo=FALSE}
+data(mtcars)
+am <- mtcars$am
+am[am == 0] <- ":automatic"
+am[am == 1] <- ":manual"
+mtcars$am <- factor(am)
+```
+
+* If you choose only am a predector, you can get a result below.
+
+```{r echo=FALSE}
+indexes <- c(9)
+mtcars2 <- mtcars[,c(indexes,1)]
+fit  <- lm(mpg ~ ., mtcars2)
+summary(fit)$coefficients
+```
+
+* If you choose am and cyl as predectors, you can get a result below.
+
+```{r echo=FALSE}
+indexes <- c(9, 2)
+mtcars2 <- mtcars[,c(indexes,1)]
+fit  <- lm(mpg ~ ., mtcars2)
+summary(fit)$coefficients
+```

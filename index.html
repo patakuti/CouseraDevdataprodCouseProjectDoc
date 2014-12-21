@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>Application for Calculating Relationships of Transmission and MPG</title>
+	<meta name="description" content="Application for Calculating Relationships of Transmission and MPG">
+	<meta name="author" content="T.H.">
+	<meta name="generator" content="slidify" />
+	
+	<!-- LOAD STYLE SHEETS -->
+	<link rel="stylesheet" href="libraries/frameworks/html5slides/default/styles.css">
+	<link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />  <link rel="stylesheet" href = "assets/css/ribbons.css">
+  
+</head>
+<body style='display: none'>
+	<section class='slides layout-regular template-regular'>
+     <article class="" id="slide-1" style="background:;">
+  <h3>Application for Calculating Relationships of Transmission and MPG</h3>
+  <p>Date: 2014/12/21</p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>The purpose of this application</h3>
+  <p>Many peaple are interested in
+exploring the relationship between a set of variables and miles per
+gallon (MPG).
+They are particularly interested in the following two questions:</p>
+
+<ul>
+<li>&quot;Is an automatic or manual transmission better for MPG&quot;</li>
+<li>&quot;Quantify the MPG difference between automatic and manual transmissions&quot;</li>
+</ul>
+
+<p>This application can calculate coefficients of multiple model
+fittings.</p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>The characteristics of this application</h3>
+  <p>You can select variables as predectors for mph interactively.</p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Screen Shot</h3>
+  <p><img src="ScreenShot.png" alt="Screen Shot"></p>
+
+</article>
+
+<article class="class" id="id" style="background:;">
+  <h3>Examples</h3>
+  <ul>
+<li>If you choose only am a predector, you can get a result below.</li>
+</ul>
+
+<pre><code>##             Estimate Std. Error t value  Pr(&gt;|t|)
+## (Intercept)   17.147      1.125  15.247 1.134e-15
+## am:manual      7.245      1.764   4.106 2.850e-04
+</code></pre>
+
+<ul>
+<li>If you choose am and cyl as predectors, you can get a result below.</li>
+</ul>
+
+<pre><code>##             Estimate Std. Error t value  Pr(&gt;|t|)
+## (Intercept)   34.522     2.6032  13.262 7.694e-14
+## am:manual      2.567     1.2914   1.988 5.635e-02
+## cyl           -2.501     0.3608  -6.931 1.285e-07
+</code></pre>
+
+</article>
+
+  </section>
+</body>
+  <!-- LOAD JAVASCRIPTS  -->
+	<script src='libraries/frameworks/html5slides/default/slides.js'></script>
+	<!-- LOAD HIGHLIGHTER JS FILES -->
+	<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+	 
+	</html>
